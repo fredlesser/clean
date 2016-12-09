@@ -35,7 +35,7 @@ h1 {
   height: 100vh;
   background: url(../images/ballet.jpg) no-repeat;
   background-size: cover;
-  z-index: 1;
+  // z-index: 1;
 
   h1 {
     position: absolute;
@@ -46,22 +46,38 @@ h1 {
   }
 }
 
-.curtain {
-  position: absolute;
-  background: rgba(white, 0.2);
-  height: 100vh;
-  width: 40%;
-  right: 0;
-}
-
 .graystripe {
-  background: $lightGray;
+  transition: all ease 2s;
+  width: 10px;
   position: fixed;
-  width: 17%;
-  // height: 100%;
+  background: $lightGray;
   right: 0;
   top: 0;
   bottom: 0;
+  // animation: grayIntro 1s ease;
+}
+
+.home .graystripe {
+  height: 100vh;
+  width: 40%;
+  opacity: 0.5;
+}
+
+@keyframes grayIntro {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(400px);
+    opacity: 0.5;
+  }
+}
+
+.about .graystripe {
+  width: 17%;
+  // height: 100%;
 }
 
 .redcircle, .redsquare {
@@ -73,6 +89,7 @@ h1 {
   right: -150px;
   top: 40%;
   border-radius: 50%;
+  display: none;
 }
 
 .redsquare {

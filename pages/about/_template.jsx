@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
+import BodyClassName from 'react-body-classname'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import Headroom from 'react-headroom'
 import Bio from '../../components/Bio'
@@ -19,18 +20,15 @@ module.exports = React.createClass({
   },
   render () {
     return (
+      <BodyClassName className='about'>
       <section className="about">
         <Bio />
-        <ReactCSSTransitionGroup
-        transitionName="fade"
-        transitionAppear={true}
-        transitionAppearTimeout={500}
-        transitionEnter={500}
-        transitionLeave={500}>
+
           {this.props.children}
-        </ReactCSSTransitionGroup>
+
         <Transition />
       </section>
+      </BodyClassName>
     )
   },
 })

@@ -3,26 +3,20 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Helmet from "react-helmet"
 import { config } from 'config'
+import BodyClassName from 'react-body-classname'
+import Transition from '../components/Transition'
 
 import '../css/main.scss'
 
 export default class Index extends React.Component {
   render () {
     return (
-      <div>
-        <Helmet
-          title={config.siteTitle}
-          meta={[
-            {"name": "description", "content": "Sample"},
-            {"name": "keywords", "content": "sample, something"},
-          ]}
-        />
+      <BodyClassName className='home'>
         <section className="cover">
-          <div className="curtain" />
-          <h1>The Bolshoi Theatre</h1>
+          <Link to={prefixLink('/about/')}><h1>The Bolshoi Theatre</h1></Link>
+          <Transition />
         </section>
-        <Link to={prefixLink('/about/')}>About</Link>
-      </div>
+      </BodyClassName>
     )
   }
 }
