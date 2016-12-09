@@ -1,0 +1,44 @@
+@import '../css/variables.scss';
+
+nav {
+  border-bottom: 1px solid $gray;
+  position: absolute;
+  top: 0;
+  width: 100vh;
+  height: $navWidth;
+  position: fixed;
+  transform-origin: left top;
+  transform: rotate(-90deg) translateX(-100%);
+  ul {
+    font-family: 'PT Mono', monospace;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    li {
+      margin: 0;
+
+      a {
+        text-decoration: none;
+        color: $darkGray;
+        position: relative;
+      }
+    }
+  }
+
+  a.active {
+    color: $red;
+  }
+
+  a.active::before {
+    content: '';
+    border-top: 1px solid $red;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+  }
+}

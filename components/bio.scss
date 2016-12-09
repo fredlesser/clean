@@ -1,0 +1,22 @@
+@import '../css/variables.scss';
+
+.bio {
+  float: left;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 20px;
+
+  img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  span {
+    margin-right: 5px;
+    font-style: italic;
+  }
+}
