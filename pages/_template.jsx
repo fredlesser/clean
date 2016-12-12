@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation'
 import { rhythm } from '../utils/typography'
 
 import '../css/main.scss'
+import '../css/shapes.scss'
 
 module.exports = React.createClass({
   propTypes () {

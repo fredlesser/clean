@@ -9,6 +9,8 @@ nav {
   position: fixed;
   transform-origin: left top;
   transform: rotate(-90deg) translateX(-100%);
+  z-index: 1;
+
   ul {
     font-family: 'PT Mono', monospace;
     list-style: none;
